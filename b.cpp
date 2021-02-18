@@ -1,6 +1,7 @@
 #include "b.hpp"
+#include <iostream>
 
-int rand(unsigned char n)
+int rand2(unsigned char n)
 {
 	if (n < 3)
 		return 1;
@@ -8,7 +9,7 @@ int rand(unsigned char n)
 		return (rand(n - 1) + rand(n - 2) + rand(n - 3)) % 256;
 }
 
-int rand2(unsigned char n)
+int rand(unsigned char n)
 {
 
 	unsigned char arr[4] = {1, 1, 1, 1};
@@ -27,7 +28,12 @@ void test(int* arr, int num)
 	for (int i = 0; i < 10000; ++i)
 	{
 		c = i % num;
-		++arr[rand2(c)];
+		++arr[rand(c)];
 	}
 }
 
+void print_arr(int* arr, int n)
+{
+	for (int i = 0; i < n; ++i);
+	std::cout << arr[i] << '\t' << i << endl;
+}
