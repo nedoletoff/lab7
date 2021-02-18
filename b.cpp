@@ -12,14 +12,14 @@ int rand2(unsigned char n)
 int rand(unsigned char n)
 {
 
-	unsigned char arr[4] = {1, 1, 1, 1};
-	unsigned char count = 3;
+	unsigned char arr[] = {1, 1, 1};
+	unsigned char count = 2;
 	while (count < n)
 	{
-		arr[count%3] = arr[0] + arr[1] + arr[2] + arr[3];
+		arr[count%3] = arr[0] + arr[1] + arr[2];
 		count++;
 	}
-	return arr[n%4];
+	return arr[n%3];
 }
 
 void test(int* arr, int num)
