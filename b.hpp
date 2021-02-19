@@ -4,4 +4,4 @@
 
 void test(int*, int);
 
-void print_arr(int*, int)
+void print_arr(int*, int);

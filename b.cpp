@@ -6,7 +6,7 @@ int rand2(unsigned char n)
 	if (n < 3)
 		return 1;
 	else
-		return (rand(n - 1) + rand(n - 2) + rand(n - 3)) % 256;
+		return (rand2(n - 1) + rand2(n - 2) + rand2(n - 3)) % 256;
 }
 
 int rand(unsigned char n)
@@ -34,6 +34,6 @@ void test(int* arr, int num)
 
 void print_arr(int* arr, int n)
 {
-	for (int i = 0; i < n; ++i);
-	std::cout << arr[i] << '\t' << i << endl;
+	for (int i = 0; i < n; ++i)
+		std::cout << arr[i] << '\t' << i << '\n';
 }
