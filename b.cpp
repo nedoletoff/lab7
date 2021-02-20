@@ -35,5 +35,13 @@ void test(int* arr, int num)
 void print_arr(int* arr, int n)
 {
 	for (int i = 0; i < n; ++i)
-		std::cout << arr[i] << '\t' << i << '\n';
+	{
+
+		std::cout << "num " << i << " - " << arr[i]; 
+		if (i % 4 == 3)
+			std::cout << '\n';
+		else
+			std::cout << "\t\t";
+	}
+	std::cout << '\n';
 }
