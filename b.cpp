@@ -22,19 +22,19 @@ int rand(unsigned char n)
 	return arr[n%3];
 }
 
-void test(int* arr, int num)
+void test(int* arr)
 {
 	unsigned char c = 0;
-	for (int i = 0; i < 10000; ++i)
+	for (int i = 0; i < 100000; ++i)
 	{
-		c = i % num;
+		c = i % 256;
 		++arr[rand(c)];
 	}
 }
 
-void print_arr(int* arr, int n)
+void print_arr(int* arr)
 {
-	for (int i = 0; i < n; ++i)
+	for (int i = 0; i < 256; ++i)
 	{
 
 		std::cout << "num " << i << " - " << arr[i]; 
