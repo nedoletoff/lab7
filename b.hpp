@@ -2,6 +2,6 @@
 
 //int rand(unsigned char);
 
-void test(int*, int);
+void test(int*);
 
-void print_arr(int*, int);
+void print_arr(int*);
